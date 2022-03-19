@@ -72,6 +72,7 @@ const Railfence = () => {
     }
 
     var p = 0;
+    //for rails 2
     if (rails === 2) {
       for (i = 0; i < n; i++) {
         if (i % 2 === 0) {
@@ -87,15 +88,43 @@ const Railfence = () => {
           p = p + 1;
         }
       }
-    }
-    console.log(x);
 
-    var ans = "";
-    for (i = 0; i < rails; i++) {
+      var ans = "";
       for (var j = 0; j < n; j++) {
-        ans += x[i][j];
+        if (j % 2 == 0) ans += x[0][j];
+        else ans += x[1][j];
       }
     }
+
+    console.log(x);
+    //for rails 3
+    var ans = "";
+    var ps = 0;
+    if (rails === 3) {
+      for (let j = 0; j < n; j++) {
+        x[0][j] = "";
+        x[1][j] = "";
+        x[2][j] = "";
+      }
+
+      for (i = 0; i < n; i += 4) {
+        x[0][i] = text.charAt(ps);
+        ps++;
+      }
+      for (i = 1; i < n; i += 2) {
+        x[1][i] = text.charAt(ps);
+        ps++;
+      }
+      for (i = 2; i < n; i += 4) {
+        x[2][i] = text.charAt(ps);
+        ps++;
+      }
+
+      for (i = 0; i < n; i++) {
+        ans += x[0][i] + x[1][i] + x[2][i];
+      }
+    }
+
     console.log(ans);
     setAns(ans);
   };
