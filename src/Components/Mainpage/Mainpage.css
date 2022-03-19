@@ -1,0 +1,31 @@
+.MainpageHeader {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 25px;
+}
+.techcontainer {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.MainpageTechniquecontainer {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid blue;
+}
+
+.TechHeading {
+  display: flex;
+  background-color: tomato;
+  color: white;
+  margin: 5px 0;
+  padding: 4px 10px;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: 500;
+}

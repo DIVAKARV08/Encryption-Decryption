@@ -1,0 +1,60 @@
+.MainpageHeader {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 25px;
+}
+.techcontainer {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.MainpageTechniquecontainer {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid blue;
+  background-color: #3f3f3f;
+  color: white;
+  font-size: 20px;
+}
+.inputText {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  height: 25px;
+  padding-left: 10px;
+  margin: 10px;
+  letter-spacing: 2px;
+}
+.RadioButtons {
+  margin: 10px 0;
+}
+.radioBtn {
+  margin-left: 20px;
+}
+.RailAns {
+  letter-spacing: 2px;
+}
+
+.btnencrypt,
+.btndecrypt {
+  background-color: #f2c22b;
+  color: white;
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 800;
+  outline: none;
+}
+.btndecrypt {
+  float: right;
+}
+.RailsDecrpyted {
+  margin-top: 20px;
+  margin-left: 15px;
+}
