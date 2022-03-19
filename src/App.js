@@ -9,7 +9,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-        <Route exact path="/" element={<Mainpage />} />
+          <Route path="/" element={<Mainpage />} />
           <Route exact path="/railfence" element={<Railfence />} />
           <Route exact path="/columnar" element={<Columnar />} />
         </Routes>
