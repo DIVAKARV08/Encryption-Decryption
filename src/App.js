@@ -5,6 +5,7 @@ import Railfence from "./Components/RailfenceTechnique/Railfence";
 import Columnar from "./Components/Columnar/Columnar";
 
 function App() {
+  console.log("public url: ", process.env.PUBLIC_URL);
   return (
     <div>
       <BrowserRouter>
