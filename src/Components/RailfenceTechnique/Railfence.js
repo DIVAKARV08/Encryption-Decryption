@@ -5,57 +5,55 @@ const Railfence = () => {
   const [Plaintext, setPlaintext] = useState("");
   const [Value, setValue] = useState();
   const [Ans, setAns] = useState("");
-  const submitForm = (e) => {
-    e.preventDefault();
-    console.log(Plaintext);
-    console.log(Value);
-    let n = Plaintext.length;
-    var x = new Array(Value);
 
-    for (var i = 0; i < Value; i++) {
+  const RailfenceEncrypt = (text, rails) => {
+    let n = text.length;
+    var x = new Array(rails);
+
+    for (var i = 0; i < rails; i++) {
       x[i] = new Array(n);
     }
-    if (Value === 2) {
+    if (rails === 2) {
       for (i = 0; i < n; i++) {
         if ((i + 1) % 2 === 0) {
-          x[1][i] = Plaintext.charAt(i);
+          x[1][i] = text.charAt(i);
           x[0][i] = "";
         } else {
           x[1][i] = "";
-          x[0][i] = Plaintext.charAt(i);
+          x[0][i] = text.charAt(i);
         }
       }
     }
     console.log(x);
 
     var ans = "";
-    for (i = 0; i < Value; i++) {
+    for (i = 0; i < rails; i++) {
       for (var j = 0; j < n; j++) {
         ans += x[i][j];
       }
     }
 
-    if (Value === 3) {
+    if (rails === 3) {
       for (i = 0; i < n; i++) {
         if ((i + 1) % 2 === 0) {
           x[0][i] = "";
-          x[1][i] = Plaintext.charAt(i);
+          x[1][i] = text.charAt(i);
           x[2][i] = "";
         } else if ((i + 1) % 4 === 1) {
-          x[0][i] = Plaintext.charAt(i);
+          x[0][i] = text.charAt(i);
           x[1][i] = "";
           x[2][i] = "";
         } else {
           x[0][i] = "";
           x[1][i] = "";
-          x[2][i] = Plaintext.charAt(i);
+          x[2][i] = text.charAt(i);
         }
       }
     }
     console.log(x);
 
     var ans = "";
-    for (i = 0; i < Value; i++) {
+    for (i = 0; i < rails; i++) {
       for (var j = 0; j < n; j++) {
         ans += x[i][j];
       }
@@ -63,6 +61,55 @@ const Railfence = () => {
 
     setAns(ans);
     console.log(ans);
+  };
+
+  const RailfenceDecrypt = (text, rails) => {
+    let n = text.length;
+    var x = new Array(rails);
+
+    for (var i = 0; i < rails; i++) {
+      x[i] = new Array(n);
+    }
+
+    var p = 0;
+    if (rails === 2) {
+      for (i = 0; i < n; i++) {
+        if (i % 2 === 0) {
+          x[0][i] = text.charAt(p);
+          x[1][i] = "";
+          p = p + 1;
+        }
+      }
+      for (i = 0; i < n; i++) {
+        if (i % 2 != 0) {
+          x[0][i] = "";
+          x[1][i] = text.charAt(p);
+          p = p + 1;
+        }
+      }
+    }
+    console.log(x);
+
+    var ans = "";
+    for (i = 0; i < rails; i++) {
+      for (var j = 0; j < n; j++) {
+        ans += x[i][j];
+      }
+    }
+    console.log(ans);
+    setAns(ans);
+  };
+
+  const submitForm = (e) => {
+    e.preventDefault();
+    console.log(Plaintext);
+    console.log(Value);
+    if (e.target.value == "Encrypt") {
+      RailfenceEncrypt(Plaintext, Value);
+    }
+    if (e.target.value == "Decrypt") {
+      RailfenceDecrypt(Plaintext, Value);
+    }
   };
   return (
     <div>
