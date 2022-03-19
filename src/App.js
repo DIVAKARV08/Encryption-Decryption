@@ -10,8 +10,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Mainpage />} />
-          <Route exact path="/railfence" element={<Railfence />} />
-          <Route exact path="/columnar" element={<Columnar />} />
+          <Route path="/railfence" element={<Railfence />} />
+          <Route path="/columnar" element={<Columnar />} />
         </Routes>
       </BrowserRouter>
     </div>
