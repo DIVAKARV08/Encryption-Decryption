@@ -65,6 +65,54 @@ const Columnar = () => {
     return ans;
   };
 
+  //Decryption algorithm
+  const readCol = (x, c, r, text, ind) => {
+    var a = "";
+    for (var i = 1; i < r + 1; i++) {
+      x[i][c] = text.charAt(ind);
+      ind = ind + 1;
+    }
+  };
+  const ColumnarDecrypt = (textp, keynew) => {
+    var text = textp.split(" ").join("");
+    console.log(text, keynew);
+    var r = text.length / keynew.length;
+    var c = keynew.length;
+    console.log(r);
+
+    var x = new Array(c);
+    for (var i = 0; i < r + 1; i++) {
+      x[i] = new Array(c);
+    }
+
+    for (var i = 0; i < c; i++) {
+      x[0][i] = keynew.charAt(i);
+    }
+
+    var k = 1;
+    var i = 0;
+    var ans = "";
+    for (var m = 0; m < c; m++) {
+      for (var j = 0; j < c; j++) {
+        if (x[0][j] == k) {
+          readCol(x, j, r, text, i);
+          i = i + r;
+          k = k + 1;
+        }
+      }
+    }
+    console.log(x);
+    var ans = "";
+    for (var ri = 1; ri < r + 1; ri++) {
+      for (var ci = 0; ci < c; ci++) {
+        ans += x[ri][ci];
+      }
+    }
+    console.log(ans);
+    setAns(ans);
+    return ans;
+  };
+
   const setCharAt = (str, index, chr) => {
     if (index > str.length - 1) return str;
     return str.substring(0, index) + chr + str.substring(index + 1);
@@ -89,6 +137,7 @@ const Columnar = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
+
     var textp = Plaintext;
     var keynew = Key;
     console.log(parseInt(keynew));
@@ -104,8 +153,17 @@ const Columnar = () => {
       var k = 1;
       var c = "a";
     }
-    for (var i = 0; i < No; i++) {
-      var textp = ColumnarEncrypt(textp, keynew);
+
+    if (e.target.value == "Encrypt") {
+      for (var i = 0; i < No; i++) {
+        var textp = ColumnarEncrypt(textp, keynew);
+      }
+    }
+
+    if (e.target.value == "Decrypt") {
+      for (var i = 0; i < No; i++) {
+        var textp = ColumnarDecrypt(textp, keynew);
+      }
     }
     setAns(textp);
   };
