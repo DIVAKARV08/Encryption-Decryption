@@ -9,7 +9,7 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Mainpage />} />
+          <Route path={`${process.env.PUBLIC_URL}`} element={<Mainpage />} />
           <Route path="/railfence" element={<Railfence />} />
           <Route path="/columnar" element={<Columnar />} />
         </Routes>
