@@ -1,0 +1,29 @@
+.game-board {
+  display: grid;
+  grid-template-rows: 40px 40px 40px;
+  grid-template-columns: 40px 40px 40px;
+}
+
+.Matrix {
+  display: flex;
+}
+/* // for some css stylings
+  body {
+    margin:100px;
+    display: flex;
+    justify-content: center;
+  } */
+.box {
+  background: #444;
+  border: 1px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+}
+
+.inputmat {
+  overflow: hidden;
+  width: 100%;
+  height: 90%;
+}

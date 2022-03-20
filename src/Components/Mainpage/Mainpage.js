@@ -14,7 +14,7 @@ const Mainpage = () => {
             <RowButton name={"Caesar Cipher"} />
             <RowButton name={"Monoalphabetic Cipher"} />
             <RowButton name={"Playfair Cipher"} />
-            <RowButton name={"Hill Cipher"} />
+            <RowButton name={"Hill Cipher"} routepath={"HillCipher"} />
             <RowButton name={"Polyalphabetic Cipher"} />
           </div>
           <div className="TechHeading">Transposition Techniques</div>

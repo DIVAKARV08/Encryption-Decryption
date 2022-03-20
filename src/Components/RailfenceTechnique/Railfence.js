@@ -133,11 +133,12 @@ const Railfence = () => {
     e.preventDefault();
     console.log(Plaintext);
     console.log(Value);
+    var text = Plaintext.split(" ").join("");
     if (e.target.value == "Encrypt") {
-      RailfenceEncrypt(Plaintext, Value);
+      RailfenceEncrypt(text, Value);
     }
     if (e.target.value == "Decrypt") {
-      RailfenceDecrypt(Plaintext, Value);
+      RailfenceDecrypt(text, Value);
     }
   };
   return (

@@ -3,9 +3,9 @@ import Mainpage from "./Components/Mainpage/Mainpage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Railfence from "./Components/RailfenceTechnique/Railfence";
 import Columnar from "./Components/Columnar/Columnar";
+import HillCipher from "./Components/HillCipher/HillCipher";
 
 function App() {
-  console.log("public url: ", process.env.PUBLIC_URL);
   return (
     <div>
       <BrowserRouter>
@@ -13,6 +13,7 @@ function App() {
           <Route path={`${process.env.PUBLIC_URL}`} element={<Mainpage />} />
           <Route path="/railfence" element={<Railfence />} />
           <Route path="/columnar" element={<Columnar />} />
+          <Route path="/HillCipher" element={<HillCipher />} />
         </Routes>
       </BrowserRouter>
     </div>
