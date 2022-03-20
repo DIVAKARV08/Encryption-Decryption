@@ -161,6 +161,7 @@ const HillCipher = () => {
 
     if (Value == 2) {
       var ainv = a[0][0] * a[1][1] - a[0][1] * a[1][0];
+      ainv = Math.abs(ainv);
       ainv = Math.sqrt(ainv);
       //   console.log(ainv);
       var temp = ainv * a[1][1];
@@ -180,8 +181,8 @@ const HillCipher = () => {
         a[0][0] * (a[1][1] * a[2][2] - a[1][2] * a[2][1]) -
         a[0][1] * (a[2][2] * a[1][0] - a[1][2] * a[2][0]) +
         a[0][2] * (a[2][1] * a[1][0] - a[1][1] * a[2][0]);
+      inverse = Math.abs(inverse);
       inverse = Math.sqrt(inverse);
-      console.log(inverse);
 
       var ainv = adjoint(a, adj);
       console.log(adj);
