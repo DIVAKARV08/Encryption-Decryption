@@ -15,7 +15,7 @@ const Mainpage = () => {
             <RowButton name={"Monoalphabetic Cipher"} />
             <RowButton name={"Playfair Cipher"} routepath={"playfair"} />
             <RowButton name={"Hill Cipher"} routepath={"HillCipher"} />
-            <RowButton name={"Polyalphabetic Cipher"} />
+            <RowButton name={"Polyalphabetic Cipher"} routepath={"polyalaphabetic"} />
           </div>
           <div className="TechHeading">Transposition Techniques</div>
           <RowButton name={"Rail Fence Technique"} routepath={"railfence"} />

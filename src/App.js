@@ -6,6 +6,7 @@ import Columnar from "./Components/Columnar/Columnar";
 import HillCipher from "./Components/HillCipher/HillCipher";
 import Ceasercipher from "./Components/CeaserCipher/Ceasercipher";
 import Playfair from "./Components/Playfair/Playfair";
+import Polyalphabeticcipher from "./Components/PolyalphabeticCipher/Polyalphabeticcipher";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/HillCipher" element={<HillCipher />} />
           <Route path="/Ceasercipher" element={<Ceasercipher />} />
           <Route path="/playfair" element={<Playfair />} />
+          <Route path="/polyalaphabetic" element={<Polyalphabeticcipher />} />
         </Routes>
       </BrowserRouter>
     </div>
