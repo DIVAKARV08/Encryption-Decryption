@@ -12,10 +12,16 @@ const Mainpage = () => {
           <div className="TechHeading">Subustution Techniques</div>
           <div className="subtech">
             <RowButton name={"Caesar Cipher"} routepath={"Ceasercipher"} />
-            <RowButton name={"Monoalphabetic Cipher"} />
+            <RowButton
+              name={"Monoalphabetic Cipher"}
+              routepath={"monoalphabetic"}
+            />
             <RowButton name={"Playfair Cipher"} routepath={"playfair"} />
             <RowButton name={"Hill Cipher"} routepath={"HillCipher"} />
-            <RowButton name={"Polyalphabetic Cipher"} routepath={"polyalaphabetic"} />
+            <RowButton
+              name={"Polyalphabetic Cipher"}
+              routepath={"polyalaphabetic"}
+            />
           </div>
           <div className="TechHeading">Transposition Techniques</div>
           <RowButton name={"Rail Fence Technique"} routepath={"railfence"} />
