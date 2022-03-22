@@ -134,6 +134,7 @@ const Railfence = () => {
     console.log(Plaintext);
     console.log(Value);
     var text = Plaintext.split(" ").join("");
+    text = text.toUpperCase();
     if (e.target.value == "Encrypt") {
       RailfenceEncrypt(text, Value);
     }
@@ -191,7 +192,7 @@ const Railfence = () => {
           </form>
           <br />
           <div className="RailAns">
-            <div className="RailAns">Cipher Text :</div>
+            <div className="RailAns">Ciphertext :</div>
             <div className="RailsDecrpyted">{Ans}</div>
           </div>
         </div>

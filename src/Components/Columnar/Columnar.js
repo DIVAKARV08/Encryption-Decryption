@@ -138,7 +138,8 @@ const Columnar = () => {
   const submitForm = (e) => {
     e.preventDefault();
 
-    var textp = Plaintext;
+    var textp = Plaintext.toUpperCase();
+    textp = textp.split(" ").join("");
     var keynew = Key;
     console.log(parseInt(keynew));
     console.log(keynew);
@@ -220,7 +221,7 @@ const Columnar = () => {
           </form>
           <br />
           <div className="RailAns">
-            <div className="RailAns">Cipher Text :</div>
+            <div className="RailAns">Ciphertext :</div>
             <div className="RailsDecrpyted">{Ans}</div>
           </div>
         </div>

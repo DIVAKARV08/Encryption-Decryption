@@ -324,7 +324,7 @@ const HillCipher = () => {
           </form>
           <br />
           <div className="RailAns">
-            <div className="RailAns">Cipher Text :</div>
+            <div className="RailAns">Ciphertext :</div>
             <div className="RailsDecrpyted">{Ans}</div>
           </div>
         </div>
