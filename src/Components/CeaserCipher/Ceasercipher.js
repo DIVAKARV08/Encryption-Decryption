@@ -49,7 +49,7 @@ const Ceasercipher = () => {
   };
   return (
     <div>
-      <div className="MainpageHeader">Columnar Method</div>
+      <div className="MainpageHeader">Ceaser cipher</div>
       <div className="techcontainer">
         <div className="MainpageTechniquecontainer">
           <form>
